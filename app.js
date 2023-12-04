@@ -7,6 +7,8 @@ const app = express()
 
 app.set('view engine', 'ejs')
 
+app.use(express.static('public'))
+
 app.get('/', (req, res) => {
     const info = {
         'name': 'sanish'
@@ -23,6 +25,10 @@ app.post('/', upload.single('myfile'), (req, res) => {
     encryptFile(newFilename)
     res.send(`${newFilename}<a href="/">home<a><br><a href="/download/${newFilename}">download</a>`)
     
+})
+
+app.get('/encrypt', (req, res) => {
+    res.redirect('/')
 })
 
 app.get('/download/:filename', (req, res) => {
@@ -45,8 +51,15 @@ app.post('/decrypt', upload.single('myfile'), (req, res) => {
 
     decryptFile(newFilename)
 
-    res.send(`decrypted file is done`)
+    res.send(`${newFilename}<a href="/">home<a><br><a href="/decrypt/download/${newFilename}">download</a>`)
 
+})
+
+app.get('/decrypt/download/:filename', (req, res) => {
+    const filename = req.params.filename
+    const filePath = __dirname + '/decrypted-files/' + filename
+
+    res.download(filePath)
 })
 
 app.listen(port, hostname, () => {
