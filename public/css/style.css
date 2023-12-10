@@ -19,5 +19,105 @@ nav a {
 }
 
 nav a:hover {
-    color: blueviolet;
+    color: rgb(189, 87, 189);;
+}
+
+.title-header {
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.upload-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 700px;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #555;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.upload-container:hover {
+    background: #eee;
+    border-color: #111;
+}
+
+.upload-container:hover .drop-title {
+    color: #222;
+  }
+  
+  .drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
+
+input[type=file] {
+    width: 350px;
+    max-width: 90%;
+    color: #444;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: purple;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+  
+input[type=file]::file-selector-button:hover {
+    background: rgb(189, 87, 189);
+}
+
+input[type=submit], button {
+    margin-right: 20px;
+    border: none;
+    background: purple;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+input[type=submit]:hover, button:hover{
+    background: rgb(189, 87, 189);
+}
+
+.download-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    color: #444;
+    cursor: pointer;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
 }

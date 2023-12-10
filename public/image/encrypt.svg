@@ -1,0 +1,15 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <g fill="#1E3050">
+   <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+   <path d="m432,180l0,-136l-200,0c-13.3,0 -24,10.7 -24,24l0,464c0,13.3 10.7,24 24,24l336,0c13.3,0 24,-10.7 24,-24l0,-328l-136,0c-13.2,0 -24,-10.8 -24,-24zm64,236c0,6.6 -5.4,12 -12,12l-168,0c-6.6,0 -12,-5.4 -12,-12l0,-8c0,-6.6 5.4,-12 12,-12l168,0c6.6,0 12,5.4 12,12l0,8zm0,-64c0,6.6 -5.4,12 -12,12l-168,0c-6.6,0 -12,-5.4 -12,-12l0,-8c0,-6.6 5.4,-12 12,-12l168,0c6.6,0 12,5.4 12,12l0,8zm0,-72l0,8c0,6.6 -5.4,12 -12,12l-168,0c-6.6,0 -12,-5.4 -12,-12l0,-8c0,-6.6 5.4,-12 12,-12l168,0c6.6,0 12,5.4 12,12zm96,-114.1l0,6.1l-128,0l0,-128l6.1,0c6.4,0 12.5,2.5 17,7l97.9,98c4.5,4.5 7,10.6 7,16.9z" fill="#1E3050"/>
+  </g>
+  <line stroke="null" id="svg_3" y2="448.79999" x2="344.99999" y1="243.79999" x1="344.99999" fill="#1E3050"/>
+  <rect stroke="null" stroke-width="0" id="svg_4" height="180" width="16" y="256.79999" x="356.00001" fill="#1E3050"/>
+  <rect stroke="null" stroke-width="0" id="svg_6" height="180" width="16" y="261.79999" x="427.00001" fill="#1E3050"/>
+  <rect stroke="null" stroke-width="0" id="svg_7" height="47.99999" width="41.00001" y="91.8" x="426.99996" fill="#1E3050"/>
+  <rect stroke="null" stroke-width="0" id="svg_8" height="47.99999" width="41.00001" y="164.8" x="495.99996" fill="#1E3050"/>
+ </g>
+</svg>

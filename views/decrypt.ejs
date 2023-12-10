@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/script.js" defer></script>
+    <title>Decrypt</title>
 </head>
 <body>
-<h1>Decrypt</h1>
-<form action="/decrypt" method="post" enctype="multipart/form-data">
-    <Lable>Upload File: </Lable>
-    <input type="file" name="myfile">
-    <input type="submit">
-</form>
+<nav>
+    <a href="/encrypt">Encrypt</a>
+    <a href="/decrypt">Decrypt</a>
+    <a href="https://github.com/mostanglan" style="float: right;"><i class="fab fa-github fa-lg"></i></a>
+</nav>
+<h1 class="title-header">File Decryption</h1>
+<div class="container">
+    <form action="/decrypt" method="post" enctype="multipart/form-data">
+        <label class="upload-container" id="dropcontainer">
+            <span class="drop-title">Drop files here</span>
+            <input type="file" name="myfile" id="myfile">
+            <input type="submit" value="Upload">
+        </label>
+    </form>
+</div>
 </body>
 </html>

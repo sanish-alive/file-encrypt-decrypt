@@ -23,7 +23,7 @@ app.post('/', upload.single('myfile'), (req, res) => {
     const newFilename = req.file.filename
 
     encryptFile(newFilename)
-    res.send(`${newFilename}<a href="/">home<a><br><a href="/download/${newFilename}">download</a>`)
+    res.render('file-download', {type:'encrypt', filename:newFilename})
     
 })
 
@@ -51,7 +51,7 @@ app.post('/decrypt', upload.single('myfile'), (req, res) => {
 
     decryptFile(newFilename)
 
-    res.send(`${newFilename}<a href="/">home<a><br><a href="/decrypt/download/${newFilename}">download</a>`)
+    res.render('file-download', {type:'decrypt', filename:newFilename})
 
 })
 
@@ -60,6 +60,10 @@ app.get('/decrypt/download/:filename', (req, res) => {
     const filePath = __dirname + '/decrypted-files/' + filename
 
     res.download(filePath)
+})
+
+app.get('/test/download', (req, res) => {
+    res.render('file-download')
 })
 
 app.listen(port, hostname, () => {

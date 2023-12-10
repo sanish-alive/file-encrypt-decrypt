@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="/js/script.js" defer></script>
-    <title>Encrypt</title>
+    <title>Download</title>
 </head>
 <body>
 <nav>
@@ -14,15 +14,21 @@
     <a href="/decrypt">Decrypt</a>
     <a href="https://github.com/mostanglan" style="float: right;"><i class="fab fa-github fa-lg"></i></a>
 </nav>
-<h1 class="title-header">File Encryption</h1>
+<h1 class="title-header"><%= type=='decrypt' ? 'Decrypted' : 'Encrypted' %> File Download</h1>
+
 <div class="container">
-    <form action="/" method="post" enctype="multipart/form-data">
-        <label class="upload-container" id="dropcontainer">
-            <span class="drop-title">Drop files here</span>
-            <input type="file" name="myfile" id="myfile">
-            <input type="submit" value="Upload">
-        </label>
-    </form>
+    <div class="download-container">
+        <img src="/image/<%= type=='decrypt' ? 'decrypt.svg' : 'encrypt.svg' %>" width="130px">
+        <p style="text-align: center;"><%= filename %></p>
+        <% if(type=='decrypt'){ %>
+            <a href="/decrypt/download/<%= filename %>">
+        <% } else { %>
+            <a href="/download/<%= filename %>">
+        <% } %>
+            <button>Download</button>
+        </a>
+    </div>
 </div>
+
 </body>
 </html>
