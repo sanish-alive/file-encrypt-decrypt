@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src="/js/script.js" defer></script>
-    <title>Decrypt</title>
-</head>
-<body>
-<nav>
-    <a href="/encrypt">Encrypt</a>
-    <a href="/decrypt">Decrypt</a>
-    <a href="https://github.com/mostanglan" style="float: right;"><i class="fab fa-github fa-lg"></i></a>
-</nav>
+<%- include('header-nav-layout.ejs') %>
 <h1 class="title-header">File Decryption</h1>
 <div class="container">
     <form action="/decrypt" method="post" enctype="multipart/form-data">

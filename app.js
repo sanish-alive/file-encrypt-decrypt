@@ -1,4 +1,5 @@
 const express = require('express')
+const fs = require('fs')
 const upload = require('./upload')
 const { encryptFile, decryptFile } = require('./cryptograhp')
 const hostname = "127.0.0.1"
@@ -35,7 +36,18 @@ app.get('/download/:filename', (req, res) => {
     const filename = req.params.filename
     const filePath = __dirname + '/encrypted-files/' + filename
 
-    res.download(filePath)
+    res.download(filePath, (err) => {
+        if(err) {
+            console.error(err)
+        }
+        fs.unlink(filePath, () => {
+            console.log('File is deleted from encrypted-files')
+        })
+        fs.unlink(__dirname+'/uploads/'+filename, () => {
+            console.log('File is deleted from uploads')
+        })
+    })
+    
 })
 
 app.get('/decrypt', (req, res) => {
@@ -59,7 +71,17 @@ app.get('/decrypt/download/:filename', (req, res) => {
     const filename = req.params.filename
     const filePath = __dirname + '/decrypted-files/' + filename
 
-    res.download(filePath)
+    res.download(filePath, (err) => {
+        if(err) {
+            console.error(err)
+        }
+        fs.unlink(filePath, () => {
+            console.log('File is deleted from decrypted-files')
+        })
+        fs.unlink(__dirname+'/uploads/'+filename, () => {
+            console.log('File is deleted from uploads')
+        })
+    })
 })
 
 app.get('/test/download', (req, res) => {
